@@ -24,6 +24,9 @@ import net.minecraftforge.event.RegistryEvent;
         name = Advancedsword.MOD_NAME,
         version = Advancedsword.VERSION
 )
+
+
+
 public class Advancedsword {
 
     public static final String MOD_ID = "assets/advancedsword";

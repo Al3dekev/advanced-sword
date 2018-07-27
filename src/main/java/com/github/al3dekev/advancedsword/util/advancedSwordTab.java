@@ -12,9 +12,10 @@ public class advancedSwordTab extends CreativeTabs {
 
     }
 
+
+
     @Override
-    public ItemStack getTabIconItem() {
-        // Ajouter les items ici
+    public ItemStack createIcon() {
         return new ItemStack(Advancedsword.sword1);
     }
 }
