@@ -1,0 +1,20 @@
+[
+  {
+    "modid": "advancedsword",
+    "name": "Advanced Sword",
+    "description": "Minecraft Forge Mod",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "github.com/Al3dekev",
+    "updateUrl": "",
+    "authorList": [
+      "Al3dekev"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": [
+      ""
+    ]
+  }
+]
