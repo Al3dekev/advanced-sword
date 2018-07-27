@@ -1,14 +1,23 @@
 package com.github.al3dekev.advancedsword;
 
+import com.github.al3dekev.advancedsword.items.ItemBase;
+import com.github.al3dekev.advancedsword.items.sword;
+import com.github.al3dekev.advancedsword.proxy.CommonProxy;
+import com.github.al3dekev.advancedsword.util.advancedSwordTab;
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.event.RegistryEvent;
+
+//import cpw.mods.fml.common.Mod;
 
 @Mod(
         modid = Advancedsword.MOD_ID,
@@ -17,7 +26,7 @@ import net.minecraftforge.event.RegistryEvent;
 )
 public class Advancedsword {
 
-    public static final String MOD_ID = "advancedsword";
+    public static final String MOD_ID = "assets/advancedsword";
     public static final String MOD_NAME = "Advanced Sword";
     public static final String VERSION = "1.0";
 
@@ -26,6 +35,15 @@ public class Advancedsword {
      */
     @Mod.Instance(MOD_ID)
     public static Advancedsword INSTANCE;
+
+
+    @SidedProxy(clientSide = "com.github.al3dekev.advancedsword.proxy.ClientProxy", serverSide = "com.github.al3dekev.advancedsword.proxy.CommonProxy")
+    public static CommonProxy proxy;
+
+    public static CreativeTabs advancedSwordCTab = new advancedSwordTab();
+
+    public static final Item sword1 = new sword();
+
 
     /**
      * This is the first initialization event. Register tile entities here.
@@ -41,6 +59,11 @@ public class Advancedsword {
      */
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+
+        ForgeRegistries.ITEMS.register(sword1);
+
+
+        proxy.registerRender();
 
     }
 
