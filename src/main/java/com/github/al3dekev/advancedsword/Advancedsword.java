@@ -43,9 +43,9 @@ public class Advancedsword {
     @SidedProxy(clientSide = "com.github.al3dekev.advancedsword.proxy.ClientProxy", serverSide = "com.github.al3dekev.advancedsword.proxy.CommonProxy")
     public static CommonProxy proxy;
 
-    public static CreativeTabs advancedSwordCTab = new advancedSwordTab();
+    public static advancedSwordTab advancedSwordCTab = new advancedSwordTab();
 
-    public static final Item sword1 = new sword();
+    public static final sword sword1 = new sword("Advanced Sword");
 
 
     /**

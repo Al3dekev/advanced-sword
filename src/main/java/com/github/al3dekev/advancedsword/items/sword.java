@@ -7,8 +7,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class sword extends ItemBase {
 
-    public sword(){
-        super("Advanced Sword");
+    public sword(String name){
+        super(name);
 
         isDamageable();
         setFull3D();
