@@ -9,11 +9,11 @@ public class sword extends ItemBase {
 
     public sword(String name){
         super(name);
-        isDamageable();
-        setFull3D();
-        shouldRotateAroundWhenRendering();
-        isRepairable();
-        setHarvestLevel("sword",3);
+        this.isDamageable();
+        this.setFull3D();
+        this.shouldRotateAroundWhenRendering();
+        this.isRepairable();
+        this.setHarvestLevel("sword",3);
         //isEnchantable();
 
     }

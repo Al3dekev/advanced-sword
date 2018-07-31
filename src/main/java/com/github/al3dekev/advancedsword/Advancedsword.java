@@ -7,6 +7,7 @@ import com.github.al3dekev.advancedsword.util.advancedSwordTab;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -17,6 +18,7 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.event.RegistryEvent;
 
+import static com.github.al3dekev.advancedsword.Advancedsword.Items.specific_sword;
 import static com.github.al3dekev.advancedsword.Advancedsword.Items.sword1;
 
 //import cpw.mods.fml.common.Mod;
@@ -31,7 +33,7 @@ import static com.github.al3dekev.advancedsword.Advancedsword.Items.sword1;
 
 public class Advancedsword {
 
-    public static final String MOD_ID = "assets/advancedsword";
+    public static final String MOD_ID = "advancedsword";
     public static final String MOD_NAME = "Advanced Sword";
     public static final String VERSION = "1.0";
 
@@ -67,7 +69,8 @@ public class Advancedsword {
     public void init(FMLInitializationEvent event) {
 
 
-        proxy.registerRender();
+        //proxy.registerRender();
+        //sword1.initModel();
 
     }
 
@@ -100,7 +103,10 @@ public class Advancedsword {
           public static final ItemBlock mySpecialBlock = null; // itemblock for the block above
           public static final MySpecialItem mySpecialItem = null; // placeholder for special item below
       */
-      public static sword sword1 = new sword("advancedSword1");
+      //@GameRegistry.ObjectHolder("advancedSword1")
+      public static final sword sword1 = new sword("advancedsword_1");
+
+        public static final sword specific_sword = new sword("advancedsword_2");
     }
 
     /**
@@ -120,6 +126,8 @@ public class Advancedsword {
 
             event.getRegistry().register(sword1);
 
+            event.getRegistry().register(specific_sword);
+
         }
 
         /**
@@ -131,14 +139,18 @@ public class Advancedsword {
              event.getRegistry().register(new MySpecialBlock().setRegistryName(MOD_ID, "mySpecialBlock"));
             */
         }
-    }
-    /* EXAMPLE ITEM AND BLOCK - you probably want these in separate files
-    public static class MySpecialItem extends Item {
+
+
+        /***
+         * Zone de gestion du modele
+         * @param event
+         */
+        @SubscribeEvent
+        public static void registerModels(ModelRegistryEvent event) {
+            //proxy.registerRender();
+            sword1.initModel();
+            specific_sword.initModel();
+        }
 
     }
-
-    public static class MySpecialBlock extends Block {
-
-    }
-    */
 }
