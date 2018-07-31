@@ -18,9 +18,8 @@ public class ItemBase extends ItemSword {
         super(DIAMOND);
         this.setMaxStackSize(1);
         this.setRegistryName(Advancedsword.MOD_ID,name);
-        this.setUnlocalizedName(name);
+        this.setUnlocalizeName(name); // NOT WORKING
         this.setCreativeTab(Advancedsword.advancedSwordCTab);
-        System.out.println("NOM DE LITEM DE MES COUILLES"+this.getRegistryName());
     }
 
 
@@ -36,10 +35,6 @@ public class ItemBase extends ItemSword {
     }
 
 
-
-    public String setUnlocalizedName(String name){
-        return name;
-    }
 
 
 }
