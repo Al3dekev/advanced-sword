@@ -4,14 +4,18 @@ import com.github.al3dekev.advancedsword.Advancedsword;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
 
-public class ItemBase extends Item {
+import static net.minecraft.item.Item.ToolMaterial.DIAMOND;
+
+public class ItemBase extends ItemSword {
 
     public ItemBase(String name){
+        super(DIAMOND);
         setCreativeTab(Advancedsword.advancedSwordCTab);
         setMaxStackSize(1);
-        //setUnlocalizedName(name);
-        setRegistryName(name);
+        setRegistryName(Advancedsword.MOD_ID,name);
+        setCreativeTab(Advancedsword.advancedSwordCTab);
     }
 
 

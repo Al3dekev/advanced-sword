@@ -17,6 +17,8 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.event.RegistryEvent;
 
+import static com.github.al3dekev.advancedsword.Advancedsword.Items.sword1;
+
 //import cpw.mods.fml.common.Mod;
 
 @Mod(
@@ -45,7 +47,8 @@ public class Advancedsword {
 
     public static advancedSwordTab advancedSwordCTab = new advancedSwordTab();
 
-    public static final sword sword1 = new sword("Advanced Sword");
+
+
 
 
     /**
@@ -62,8 +65,6 @@ public class Advancedsword {
      */
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-
-        ForgeRegistries.ITEMS.register(sword1);
 
 
         proxy.registerRender();
@@ -99,6 +100,7 @@ public class Advancedsword {
           public static final ItemBlock mySpecialBlock = null; // itemblock for the block above
           public static final MySpecialItem mySpecialItem = null; // placeholder for special item below
       */
+      public static sword sword1 = new sword("advancedSword1");
     }
 
     /**
@@ -115,6 +117,9 @@ public class Advancedsword {
              event.getRegistry().register(new ItemBlock(Blocks.myBlock).setRegistryName(MOD_ID, "myBlock"));
              event.getRegistry().register(new MySpecialItem().setRegistryName(MOD_ID, "mySpecialItem"));
             */
+
+            event.getRegistry().register(sword1);
+
         }
 
         /**
