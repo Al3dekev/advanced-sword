@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "advancedsword:advancedsword_1"
+  },
+  "pattern": [
+    "  o",
+    " o ",
+    "s  "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "o": {
+      "item": "minecraft:diamond_block"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    }
+  }
+}
