@@ -71,7 +71,7 @@ public class Advancedsword {
 
 
         //proxy.registerRender();
-        //sword1.initModel();
+        //pas de rendu proxy
 
     }
 
@@ -89,9 +89,7 @@ public class Advancedsword {
      */
     @GameRegistry.ObjectHolder(MOD_ID)
     public static class Blocks {
-      /*
-          public static final MySpecialBlock mySpecialBlock = null; // placeholder for special block below
-      */
+        // Vide
     }
 
     /**
@@ -100,14 +98,11 @@ public class Advancedsword {
      */
     @GameRegistry.ObjectHolder(MOD_ID)
     public static class Items {
-      /*
-          public static final ItemBlock mySpecialBlock = null; // itemblock for the block above
-          public static final MySpecialItem mySpecialItem = null; // placeholder for special item below
-      */
+
       //@GameRegistry.ObjectHolder("advancedSword1")
       public static final sword sword1 = new sword("advancedsword_1");
 
-        public static final sword test_sword = new sword("testsword");
+      public static final sword test_sword = new sword("testsword");
     }
 
     /**
@@ -119,15 +114,11 @@ public class Advancedsword {
          * Listen for the register event for creating custom items
          */
         @SubscribeEvent
-        public static void addItems(RegistryEvent.Register<Item> event) {
-           /*
-             event.getRegistry().register(new ItemBlock(Blocks.myBlock).setRegistryName(MOD_ID, "myBlock"));
-             event.getRegistry().register(new MySpecialItem().setRegistryName(MOD_ID, "mySpecialItem"));
-            */
+        public static void addItems(RegistryEvent.Register<Item> event){
 
             event.getRegistry().register(sword1);
 
-            event.getRegistry().register(test_sword);
+            //event.getRegistry().register(test_sword);
 
         }
 
@@ -136,9 +127,7 @@ public class Advancedsword {
          */
         @SubscribeEvent
         public static void addBlocks(RegistryEvent.Register<Block> event) {
-           /*
-             event.getRegistry().register(new MySpecialBlock().setRegistryName(MOD_ID, "mySpecialBlock"));
-            */
+            // Vide
         }
 
 

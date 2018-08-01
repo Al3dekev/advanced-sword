@@ -1,13 +1,10 @@
 {
-  "result": {
-    "item": "advancedsword:advancedsword_1"
-  },
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "  o",
     " o ",
-    "s  "
+    "r  "
   ],
-  "type": "minecraft:crafting_shaped",
   "key": {
     "o": {
       "item": "minecraft:diamond_block"
@@ -15,5 +12,10 @@
     "r": {
       "item": "minecraft:redstone"
     }
+  },
+  "result": {
+    "item": "advancedsword:advancedsword_1",
+    "data":0,
+    "count":1
   }
 }
