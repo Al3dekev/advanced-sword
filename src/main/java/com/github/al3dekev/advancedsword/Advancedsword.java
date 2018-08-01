@@ -18,8 +18,9 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.event.RegistryEvent;
 
-import static com.github.al3dekev.advancedsword.Advancedsword.Items.specific_sword;
+import static com.github.al3dekev.advancedsword.Advancedsword.Items.test_sword;
 import static com.github.al3dekev.advancedsword.Advancedsword.Items.sword1;
+import static com.github.al3dekev.advancedsword.Advancedsword.Items.test_sword;
 
 //import cpw.mods.fml.common.Mod;
 
@@ -106,7 +107,7 @@ public class Advancedsword {
       //@GameRegistry.ObjectHolder("advancedSword1")
       public static final sword sword1 = new sword("advancedsword_1");
 
-        public static final sword specific_sword = new sword("advancedsword_2");
+        public static final sword test_sword = new sword("testsword");
     }
 
     /**
@@ -126,7 +127,7 @@ public class Advancedsword {
 
             event.getRegistry().register(sword1);
 
-            event.getRegistry().register(specific_sword);
+            event.getRegistry().register(test_sword);
 
         }
 
@@ -149,7 +150,7 @@ public class Advancedsword {
         public static void registerModels(ModelRegistryEvent event) {
             //proxy.registerRender();
             sword1.initModel();
-            specific_sword.initModel();
+            test_sword.initModel();
         }
 
     }

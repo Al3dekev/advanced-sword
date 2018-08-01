@@ -1,4 +1,4 @@
 itemGroup.Advanced Sword=Advanced Sword
 item.null.name=Unknown Name
-item.sword1=Advanced Sword
-advancedsword:advancedSword1=Epee1
+item.advancedsword_1.name=Advanced Sword
+item.test_sword.name=Test Sword
