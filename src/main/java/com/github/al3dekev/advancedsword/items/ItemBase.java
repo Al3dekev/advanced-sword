@@ -23,11 +23,7 @@ public class ItemBase extends ItemSword {
     }
 
 
-    public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
-    {
-        stack.damageItem(1, attacker);
-        return true;
-    }
+
 
     @SideOnly(Side.CLIENT)
     public void initModel() {
