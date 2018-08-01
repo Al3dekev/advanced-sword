@@ -18,7 +18,7 @@ public class ItemBase extends ItemSword {
         super(DIAMOND);
         this.setMaxStackSize(1);
         this.setRegistryName(Advancedsword.MOD_ID,name);
-        this.setUnlocalizeName(name); // NOT WORKING
+        this.setUnlocalizedName(name); // NOT WORKING
         this.setCreativeTab(Advancedsword.advancedSwordCTab);
     }
 

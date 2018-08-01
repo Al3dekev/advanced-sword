@@ -13,13 +13,14 @@ public class advancedSwordTab extends CreativeTabs {
 
     public advancedSwordTab(){
         super("Advanced Sword");
+        //this.setBackgroundImageName("golden");
 
     }
 
 
 
     @Override
-    public ItemStack createIcon() {
+    public ItemStack getTabIconItem() {
         return new ItemStack(Items.GOLDEN_SWORD);
     }
 }
